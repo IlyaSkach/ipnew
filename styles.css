@@ -65,6 +65,11 @@ body {
   display: block;
   line-height: 1.1;
   padding: 0.2em 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+  
 }
 
 .main-nav {
