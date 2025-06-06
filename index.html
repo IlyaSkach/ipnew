@@ -22,7 +22,7 @@
 			<div class="header__content">
 				<div class="logo">
 					<a href="#">
-						<span class="logo-text">ИП Иванов И.И.</span>
+						<span class="logo-text">ИП Тулякова К.Ю.</span>
 					</a>
 				</div>
 				<button class="mobile-menu-button" aria-label="Открыть меню">
@@ -39,13 +39,13 @@
 					</ul>
 				</nav>
 				<div class="contact-info">
-					<a href="tel:+7777777777" class="phone">
+					<a href="tel:+79919638705" class="phone">
 						<i class="fas fa-phone"></i>
-						+7(777)777-77-77
+						+7(991)963-87-05
 					</a>
-					<a href="mailto:ippchelkina@mail.ru" class="email">
+					<a href="mailto:iptulyakova@yandex.ru" class="email">
 						<i class="fas fa-envelope"></i>
-						ipnew@mail.ru
+						iptulyakova@yandex.ru
 					</a>
 				</div>
 				<div class="mobile-menu-overlay"></div>
@@ -57,13 +57,13 @@
 						<li><a href="#contact">Контакты</a></li>
 					</ul>
 					<div class="contact-info">
-						<a href="tel:+7777777777" class="phone">
+						<a href="tel:+79919638705" class="phone">
 							<i class="fas fa-phone"></i>
-							+7(777)777-77-77
+							+7(991)963-87-05
 						</a>
-						<a href="mailto:ippchelkina@mail.ru" class="email">
+						<a href="mailto:iptulyakova@yandex.ru" class="email">
 							<i class="fas fa-envelope"></i>
-							ipnew@mail.ru
+							iptulyakova@yandex.ru
 						</a>
 					</div>
 				</div>
@@ -113,14 +113,26 @@
 				<h2>Готовы начать сотрудничество?</h2>
 				<p>Свяжитесь для получения подробной информации об услугах</p>
 				<div class="cta-buttons">
-					<a href="tel:+7777777777" class="cta-button">
+					<a href="tel:+79919638705" class="cta-button">
 						<i class="fas fa-phone"></i>
 						Позвонить
 					</a>
-					<a href="mailto:ipnew@mail.ru" class="cta-button secondary">
+					<a href="mailto:iptulyakova@yandex.ru?subject=iptulyakova@yandex.ru(если адрес не подставился в Кому — вставьте его вручную)" class="cta-button secondary" id="writeButton"
+						style="pointer-events: none; opacity: 0.5;">
 						<i class="fas fa-envelope"></i>
 						Написать
 					</a>
+				</div>
+				<div class="contact-form">
+					<form id="contactForm" action="#" method="POST">
+						<div class="form-group checkbox-group">
+							<input type="checkbox" id="privacy" name="privacy" required onchange="toggleWriteButton()">
+							<label for="privacy">
+								Даю согласие на обработку данных
+								<a href="#" onclick="showConsentModal(); return false;" class="consent-link">(подробнее)</a>
+							</label>
+						</div>
+					</form>
 				</div>
 			</div>
 		</section>
@@ -130,7 +142,7 @@
 		<div class="container">
 			<div class="footer-content">
 				<div class="footer-logo">
-					<span class="logo-text">ИП Иванов И.И.</span>
+					<span class="logo-text">ИП Тулякова К.Ю.</span>
 				</div>
 				<nav class="footer-nav">
 					<ul>
@@ -141,11 +153,11 @@
 					</ul>
 				</nav>
 				<div class="footer-contacts">
-					<a href="tel:+7777777777" class="phone"><i class="fas fa-phone"></i> +7(777)777-77-77</a>
-					<a href="mailto:ipnew@mail.ru" class="email"><i class="fas fa-envelope"></i> ipnew@mail.ru</a>
+					<a href="tel:+79919638705" class="phone"><i class="fas fa-phone"></i> +7(991)963-87-05</a>
+					<a href="mailto:iptulyakova@yandex.ru" class="email"><i class="fas fa-envelope"></i> iptulyakova@yandex.ru</a>
 				</div>
 			</div>
-			<p class="footer-copy">&copy; 2025 ИП Новое. Все права защищены.</p>
+			<p class="footer-copy">&copy; 2025 ИП Тулякова К.Ю. Все права защищены.</p>
 			<p><a href="#" onclick="showPrivacyPolicyModal()">Политика конфиденциальности</a></p>
 		</div>
 	</footer>
@@ -201,7 +213,98 @@
 		</div>
 	</div>
 
+	<!-- Модальное окно согласия -->
+	<div id="consent-modal" class="privacy-policy-modal">
+		<div class="privacy-policy-modal-content">
+			<button class="close-button" onclick="closeConsentModal()">&times;</button>
+			<h2>Согласие</h2>
+			<div class="privacy-policy-text">
+				<p>Нажимая кнопку «Отправить», в соответствии с Условиями обработки персональных данных я даю согласие в адрес
+					ИНДИВИДУАЛЬНОГО ПРЕДПРИНИМАТЕЛЯ Туляковой К.Ю. (далее по тексту – Оператор) на автоматизированную, а также без
+					использования средств автоматизации обработку персональных данных, заполненных в настоящей анкете и
+					содержащихся во всех приложенных к ней файлах, в целях предоставления мне услуг.</p>
+
+				<p>Я проинформирован(а), что под обработкой персональных данных понимаются действия (операции) с персональными
+					данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение),
+					извлечение, использование, передачу (предоставление, доступ), блокирование, удаление, уничтожение персональных
+					данных. Передавая персональные данные третьего лица Оператору, подтверждаю и гарантирую наличие согласия
+					третьего лица на такое предоставление данных.</p>
+
+				<p>Согласие действует со дня его предоставления до дня отзыва в письменной форме, но в любом случае не более 1
+					(одного) года со дня предоставления.</p>
+
+				<p>Отозвать согласие можно путём направления заявления в свободной форме по адресу Оператора, указав в тексте:
+					ФИО; номер основного документа, удостоверяющего личность субъекта персональных данных или его представителя,
+					сведения о дате выдачи указанного документа и выдавшем его органе либо иные данные, позволяющие однозначно
+					идентифицировать субъекта персональных данных; сведения, подтверждающие участие в отношениях с Оператором,
+					либо сведения, иным способом подтверждающие факт обработки персональных данных Оператором; подпись гражданина
+					(или его законного представителя).</p>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		.checkbox-group {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			margin-bottom: 20px;
+		}
+
+		.checkbox-group input[type="checkbox"] {
+			width: 20px;
+			height: 20px;
+			cursor: pointer;
+		}
+
+		.checkbox-group label {
+			font-size: 14px;
+			color: #333;
+			cursor: pointer;
+		}
+
+		.consent-link {
+			color: #007bff;
+			text-decoration: underline;
+			margin-left: 5px;
+		}
+
+		.consent-link:hover {
+			color: #0056b3;
+		}
+	</style>
+
 	<script src="script.js"></script>
+	<script>
+		function toggleWriteButton() {
+			const checkbox = document.getElementById('privacy');
+			const writeButton = document.getElementById('writeButton');
+
+			if (checkbox.checked) {
+				writeButton.style.pointerEvents = 'auto';
+				writeButton.style.opacity = '1';
+			} else {
+				writeButton.style.pointerEvents = 'none';
+				writeButton.style.opacity = '0.5';
+			}
+		}
+
+		function showConsentModal() {
+			document.getElementById('consent-modal').style.display = 'block';
+		}
+
+		function closeConsentModal() {
+			document.getElementById('consent-modal').style.display = 'none';
+		}
+
+		// Закрытие модального окна при клике вне его содержимого
+		window.onclick = function (event) {
+			const modal = document.getElementById('consent-modal');
+			if (event.target == modal) {
+				modal.style.display = 'none';
+			}
+		}
+	</script>
 </body>
 
 </html>
